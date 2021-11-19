@@ -14,8 +14,8 @@ body {
 }
 
 #window {
-    width: 50%;
-    height: 500px;
+    width: 60%;
+    height: 600px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
