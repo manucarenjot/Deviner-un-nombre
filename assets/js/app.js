@@ -36,7 +36,7 @@ function clic() {
             number.style.color = "rgba(0,255,4,0.7)";
             chances.innerHTML = "Il te reste " + tentative + " chances";
         } else if (parseInt(text.value) < reponse) {
-           dialogue.innerHTML = " TON NOMBRE EST TROP PETIT QUEL DOMMAGE !";
+           dialogue.innerHTML = " TON NOMBRE EST TROP PETIT! CHEH !";
             dialogue.style.color = "red";
             dialogue.style.fontSize = "1.3rem";
             dialogue.style.textAlign = "center";
