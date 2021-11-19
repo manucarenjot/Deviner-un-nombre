@@ -32,9 +32,10 @@ function clic() {
             dialogue.style.textAlign = "center";
             dialogue.style.backgroundColor = "rgba(63,115,140,0.7)";
             number.innerText += text.value + " | ";
-            number.style.fontSize = "1.5rem";
+            number.style.fontSize = "1rem";
             number.style.color = "rgba(0,255,4,0.7)";
             chances.innerHTML = "Il te reste " + tentative + " chances";
+
         } else if (parseInt(text.value) < reponse) {
            dialogue.innerHTML = " TON NOMBRE EST TROP PETIT! CHEH !";
             dialogue.style.color = "red";
@@ -42,7 +43,7 @@ function clic() {
             dialogue.style.textAlign = "center";
             dialogue.style.backgroundColor = "rgba(91,255,255,0.7)";
             number.innerText += text.value + " | ";
-            number.style.fontSize = "1.5rem";
+            number.style.fontSize = "1rem";
             chances.innerHTML = "Il te reste " + tentative + " chances";
 
         } else if (parseInt(text.value) > reponse) {
@@ -52,7 +53,7 @@ function clic() {
             dialogue.style.textAlign = "center";
             dialogue.style.backgroundColor = "rgba(91,255,255,0.7)";
             number.innerText += text.value + " | ";
-            number.style.fontSize = "1.5rem";
+            number.style.fontSize = "1rem";
             chances.innerHTML = "Il te reste " + tentative + " chances";
 
         } else if (parseInt(text.value) !== reponse) {
@@ -62,7 +63,7 @@ function clic() {
             dialogue.style.textAlign = "center";
             dialogue.style.backgroundColor = "rgba(100,215,215,0.7)";
             number.innerText += text.value + " | ";
-            number.style.fontSize = "1.5rem";
+            number.style.fontSize = "1rem";
             chances.innerHTML = "Il te reste " + tentative + " chances";
         }
         if (i===11) {
