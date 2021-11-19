@@ -2,7 +2,8 @@ let fenetre = document.getElementById("window");
 let text = document.getElementById("text");
 let button = document.getElementById("submit");
 let chances = document.getElementById("chances");
-let dialogue = document.getElementById("erreur")
+let dialogue = document.getElementById("erreur");
+let number = document.getElementById("les-nombres");
 let reponse = Math.floor(Math.random() * 100) + 1;
 console.log(reponse)
 
@@ -13,35 +14,43 @@ let i = 0
 function clic() {
     if (i < 11) {
         console.log('Boum');
-        let test = document.createElement("p");
-        test.innerHTML = text.value;
-        test.style.backgroundColor = "white";
-        test.style.width = "50%";
-        test.style.textAlign = "center";
-        fenetre.appendChild(test);
+
+
         i++
 
         if (parseInt(text.value) === reponse) {
 
-            test.innerHTML = text.value + " | You win";
-            test.style.backgroundColor = "green";
+            dialogue.innerHTML ="C'est gagné ! OUI!";
+            dialogue.style.color = "rgba(0,255,4,0.7)";
+            dialogue.style.fontSize = "2.3rem"
+            dialogue.style.textAlign = "center"
+            dialogue.style.backgroundColor = "rgba(63,115,140,0.7)"
         } else if (parseInt(text.value) < reponse) {
 
-            test.innerHTML = text.value + " ||  TON NOMBRE EST TROP PETIT QUEL DOMMAGE !";
-            test.style.backgroundColor = "red";
+           dialogue.innerHTML = text.value + " ||  TON NOMBRE EST TROP PETIT QUEL DOMMAGE !";
+            dialogue.style.backgroundColor = "red";
+            let nombre =document.createElement("p");
+            number.append(nombre);
+            nombre.innerHTML = text.value
         } else if (parseInt(text.value) > reponse) {
-            test.innerHTML = text.value + " ||  TON NOMBRE EST TROP GRAND MALHEUREUX !";
-            test.style.backgroundColor = "red";
-            test.style.color = "white";
+            dialogue.innerHTML ="TON NOMBRE EST TROP GRAND MALHEUREUX !";
+            dialogue.style.color = "red";
+            dialogue.style.fontSize = "1.3rem"
+            dialogue.style.textAlign = "center"
+            dialogue.style.backgroundColor = "rgba(91,255,255,0.7)"
         } else if (parseInt(text.value) !== reponse) {
-            test.innerHTML = text.value + " ||  ON A DIT DES NOMBRE PAS DES LETTRES, TU ME FAIS DOUTER DE TES CAPACITE !";
-            test.style.backgroundColor = "red";
-            test.style.color = "white";
+            dialogue.innerHTML = "  ON A DIT DES NOMBRE PAS DES LETTRES, TU ME FAIS DOUTER DE TES CAPACITE !";
+            dialogue.style.color = "red";
+            dialogue.style.fontSize = "1.3rem"
+            dialogue.style.textAlign = "center"
+            dialogue.style.backgroundColor = "rgba(100,215,215,0.7)"
         }
         if (i===11) {
-            test.innerHTML = text.value + " || FELICITATION ! TU AS PERDU ! ";
-            test.style.backgroundColor = "red";
-            test.style.color = "white";
+            dialogue.innerHTML ="  FELICITATION ! TU AS PERDU ! ";
+            dialogue.style.color = "red";
+            dialogue.style.fontSize = "1.3rem"
+            dialogue.style.textAlign = "center"
+            dialogue.style.backgroundColor = "rgba(91,255,255,0.7)"
         }
 
 
