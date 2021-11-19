@@ -5,6 +5,7 @@ let chances = document.getElementById("chances");
 let dialogue = document.getElementById("erreur");
 let number = document.getElementById("number");
 let reponse = Math.floor(Math.random() * 100) + 1;
+let tentative = 10
 console.log(reponse)
 
 
@@ -45,8 +46,9 @@ function clic() {
             dialogue.style.backgroundColor = "rgba(91,255,255,0.7)"
             number.innerText += text.value + " | "
             number.style.fontSize = "3rem"
+
         } else if (parseInt(text.value) !== reponse) {
-            dialogue.innerHTML = "  ON A DIT DES NOMBRE PAS DES LETTRES, TU ME FAIS DOUTER DE TES CAPACITE !";
+            dialogue.innerHTML = "  ON A DIT DES NOMBRE, TU ME FAIS DOUTER DE TES CAPACITÈS !";
             dialogue.style.color = "red";
             dialogue.style.fontSize = "1.3rem"
             dialogue.style.textAlign = "center"
@@ -55,7 +57,7 @@ function clic() {
             number.style.fontSize = "3rem"
         }
         if (i===11) {
-            dialogue.innerHTML ="  FELICITATION ! TU AS PERDU ! ";
+            dialogue.innerHTML ="  FELICITATION ! TU AS PERDU ! " + "BOUM !";
             dialogue.style.color = "red";
             dialogue.style.fontSize = "1.3rem";
             dialogue.style.textAlign = "center";
