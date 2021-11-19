@@ -34,10 +34,11 @@ body {
 }
 
 #submit {
-    width: 35px;
+    width: auto;
     height: 35px;
     border: solid 3px #00f688;
     border-radius: 50px 50px;
+    font-size: 0.7rem;
 }
 
 #dialogue {
