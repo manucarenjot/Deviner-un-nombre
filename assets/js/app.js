@@ -86,3 +86,13 @@ function clic() {
 function for click the buton
  */
 button.addEventListener("click", clic);
+
+
+window.onkeydown = function(e) {
+    var key = e.key;
+    switch (key) {
+        case 'Enter':
+            clic()
+            break;
+    }
+}
