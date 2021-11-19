@@ -82,5 +82,7 @@ function clic() {
     }
 }
 
-
+/*
+function for click the buton
+ */
 button.addEventListener("click", clic);
