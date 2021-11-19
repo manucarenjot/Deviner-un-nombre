@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: steelblue;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+    align-items: center;
+}
+
+#window {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+    border: solid 10px rgba(86, 178, 178, 0.7);
+    background-color: #528dbe;
+    border-radius: 20px;
+}
+
+#text {
+    height: 25px;
+}
+
+#submit {
+    width: 45px;
+    height: 25px;
+}
