@@ -18,6 +18,11 @@ function clic() {
 
 
         i++
+        if (tentative > 0) {
+            console.log(tentative);
+            tentative--;
+        }
+
 
         if (parseInt(text.value) === reponse) {
 
@@ -28,7 +33,8 @@ function clic() {
             dialogue.style.backgroundColor = "rgba(63,115,140,0.7)";
             number.innerText += text.value + " | "
             number.style.fontSize = "3rem"
-            number.style.color = "rgba(0,255,4,0.7)"
+            number.style.color = "rgba(0,255,4,0.7)";
+            chances.innerHTML = "Il te reste " + tentative + " chances";
         } else if (parseInt(text.value) < reponse) {
            dialogue.innerHTML = " TON NOMBRE EST TROP PETIT QUEL DOMMAGE !";
             dialogue.style.color = "red";
@@ -37,24 +43,27 @@ function clic() {
             dialogue.style.backgroundColor = "rgba(91,255,255,0.7)"
             number.innerText += text.value + " | "
             number.style.fontSize = "3rem"
+            chances.innerHTML = "Il te reste " + tentative + " chances";
 
         } else if (parseInt(text.value) > reponse) {
             dialogue.innerHTML ="TON NOMBRE EST TROP GRAND MALHEUREUX !";
             dialogue.style.color = "red";
-            dialogue.style.fontSize = "1.3rem"
-            dialogue.style.textAlign = "center"
-            dialogue.style.backgroundColor = "rgba(91,255,255,0.7)"
-            number.innerText += text.value + " | "
-            number.style.fontSize = "3rem"
+            dialogue.style.fontSize = "1.3rem";
+            dialogue.style.textAlign = "center";
+            dialogue.style.backgroundColor = "rgba(91,255,255,0.7)";
+            number.innerText += text.value + " | ";
+            number.style.fontSize = "3rem";
+            chances.innerHTML = "Il te reste " + tentative + " chances";
 
         } else if (parseInt(text.value) !== reponse) {
             dialogue.innerHTML = "  ON A DIT DES NOMBRE, TU ME FAIS DOUTER DE TES CAPACITÈS !";
             dialogue.style.color = "red";
-            dialogue.style.fontSize = "1.3rem"
-            dialogue.style.textAlign = "center"
-            dialogue.style.backgroundColor = "rgba(100,215,215,0.7)"
-            number.innerText += text.value + " | "
-            number.style.fontSize = "3rem"
+            dialogue.style.fontSize = "1.3rem";
+            dialogue.style.textAlign = "center";
+            dialogue.style.backgroundColor = "rgba(100,215,215,0.7)";
+            number.innerText += text.value + " | ";
+            number.style.fontSize = "3rem";
+            chances.innerHTML = "Il te reste " + tentative + " chances";
         }
         if (i===11) {
             dialogue.innerHTML ="  FELICITATION ! TU AS PERDU ! " + "BOUM !";
