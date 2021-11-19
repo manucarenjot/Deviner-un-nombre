@@ -14,7 +14,6 @@ let i = 0
 
 function clic() {
     if (i < 11) {
-        console.log('Boum');
 
 
         i++
@@ -26,7 +25,7 @@ function clic() {
 
         if (parseInt(text.value) === reponse) {
 
-            dialogue.innerHTML ="C'est gagné ! OUI!";
+            dialogue.innerHTML = "C'est gagné ! OUI!";
             dialogue.style.color = "rgba(0,255,4,0.7)";
             dialogue.style.fontSize = "2.3rem";
             dialogue.style.textAlign = "center";
@@ -38,7 +37,7 @@ function clic() {
             fenetre.style.borderColor = "green";
 
         } else if (parseInt(text.value) < reponse) {
-           dialogue.innerHTML = " TON NOMBRE EST TROP PETIT! CHEH !";
+            dialogue.innerHTML = " TON NOMBRE EST TROP PETIT! CHEH !";
             dialogue.style.color = "red";
             dialogue.style.fontSize = "1.3rem";
             dialogue.style.textAlign = "center";
@@ -48,7 +47,7 @@ function clic() {
             chances.innerHTML = "Il te reste " + tentative + " chances";
 
         } else if (parseInt(text.value) > reponse) {
-            dialogue.innerHTML ="TON NOMBRE EST TROP GRAND MALHEUREUX !";
+            dialogue.innerHTML = "TON NOMBRE EST TROP GRAND MALHEUREUX !";
             dialogue.style.color = "red";
             dialogue.style.fontSize = "1.3rem";
             dialogue.style.textAlign = "center";
@@ -68,8 +67,8 @@ function clic() {
             chances.innerHTML = "Il te reste " + tentative + " chances";
 
         }
-        if (i===11) {
-            dialogue.innerHTML ="  FELICITATION ! TU AS PERDU ! " + "BOUM !";
+        if (i === 11) {
+            dialogue.innerHTML = "  FELICITATION ! TU AS PERDU ! " + "BOUM !";
             dialogue.style.color = "red";
             dialogue.style.fontSize = "1.3rem";
             dialogue.style.textAlign = "center";
@@ -80,9 +79,8 @@ function clic() {
             button.style.borderColor = "red";
         }
 
-
     }
 }
 
 
-    button.addEventListener("click", clic);
+button.addEventListener("click", clic);
