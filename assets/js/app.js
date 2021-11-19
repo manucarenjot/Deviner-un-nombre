@@ -17,7 +17,6 @@ while (i<10) {
 
 
 
-
 button.addEventListener("click", function(){
     console.log('Boum');
     let test = document.createElement("p");
