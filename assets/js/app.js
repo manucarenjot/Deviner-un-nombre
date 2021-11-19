@@ -57,7 +57,7 @@ function clic() {
             chances.innerHTML = "Il te reste " + tentative + " chances";
 
         } else if (parseInt(text.value) !== reponse) {
-            dialogue.innerHTML = "  ON A DIT DES NOMBRE, TU ME FAIS DOUTER DE TES CAPACITÈS !";
+            dialogue.innerHTML = "  ON A DIT UN NOMBRE, TU ME FAIS DOUTER DE TES CAPACITÈS !";
             dialogue.style.color = "red";
             dialogue.style.fontSize = "1.3rem";
             dialogue.style.textAlign = "center";
