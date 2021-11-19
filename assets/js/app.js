@@ -35,6 +35,7 @@ function clic() {
             number.style.fontSize = "1rem";
             number.style.color = "rgba(0,255,4,0.7)";
             chances.innerHTML = "Il te reste " + tentative + " chances";
+            fenetre.style.borderColor = "green";
 
         } else if (parseInt(text.value) < reponse) {
            dialogue.innerHTML = " TON NOMBRE EST TROP PETIT! CHEH !";
@@ -65,6 +66,7 @@ function clic() {
             number.innerText += text.value + " | ";
             number.style.fontSize = "1rem";
             chances.innerHTML = "Il te reste " + tentative + " chances";
+
         }
         if (i===11) {
             dialogue.innerHTML ="  FELICITATION ! TU AS PERDU ! " + "BOUM !";
@@ -74,6 +76,8 @@ function clic() {
             dialogue.style.backgroundColor = "rgba(91,255,255,0.7)";
             fenetre.style.animationName = "error";
             fenetre.style.animationDuration = "0.5s";
+            fenetre.style.borderColor = "red";
+            button.style.borderColor = "red";
         }
 
 
